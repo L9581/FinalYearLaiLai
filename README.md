@@ -1,6 +1,6 @@
 # 本地语音交互实验室
 
-新声音已接入 **GPT-SoVITS v4 + 纳西妲 RVC**。使用方法、试听与启动命令见 [新语音说明](docs/voice-upgrade.md)；新网页端口为 `8502`，配置为 `config.voice-upgrade.toml`。下文的 `config.local.toml` 保留用于原始 Whisper/SenseVoice、VITS/Kokoro 试验。
+新声音已接入 **GPT-SoVITS v4 + 纳西妲 RVC**。从 GitHub 在新电脑安装请先看 [GPT-SoVITS v4 安装教程](docs/install-gpt-sovits.md)；已有本机配置的使用方法、试听与启动命令见 [新语音说明](docs/voice-upgrade.md)。新网页端口为 `8502`，配置为 `config.voice-upgrade.toml`。下文的 `config.local.toml` 保留用于原始 Whisper/SenseVoice、VITS/Kokoro 试验。
 
 仓库只保存代码、配置模板和文档，不包含大型模型、GPT-SoVITS 运行包、RVC 权重、个人录音或实验输出。这些文件被 `.gitignore` 排除，按下文说明在目标电脑上准备。当前升级配置模板见 `config.voice-upgrade.example.toml`；复制为 `config.voice-upgrade.toml` 后填写参考音频和实际模型路径。
 
