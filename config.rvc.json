@@ -1,0 +1,8 @@
+{
+  "model": "rvc/RVC_Nahida/nahida.pth",
+  "index": "rvc/RVC_Nahida/nahida_added_IVF840_Flat_nprobe_1_naxida_v2.index",
+  "voice_name": "纳西妲",
+  "device": "cuda:0",
+  "is_half": true,
+  "speaker_id": 0
+}

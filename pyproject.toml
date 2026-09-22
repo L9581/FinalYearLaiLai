@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-voice-lab"
+version = "0.1.0"
+description = "Local ASR -> LLM -> TTS prototype and speech experiments"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.12,<2",
+  "streamlit>=1.40,<2",
+]
+
+[project.optional-dependencies]
+whisper = ["faster-whisper>=1.1,<2"]
+sensevoice = ["funasr>=1.2,<2", "torchaudio>=2.2", "torch>=2.2"]
+tts = ["sherpa-onnx>=1.12,<2"]
+denoise = ["noisereduce>=3.0,<4"]
+dev = ["pytest>=7.4,<9"]
+
+[tool.setuptools.packages.find]
+include = ["voice_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
