@@ -1,0 +1,67 @@
+[audio]
+denoise = "off"
+max_seconds = 60
+noise_reduction = 0.65
+
+[asr]
+backend = "sensevoice"
+device = "cpu"
+whisper_model = "models/faster-whisper-small"
+compute_type = "int8"
+language = ""
+sensevoice_model = "iic/SenseVoiceSmall"
+sensevoice_runtime = "sherpa-onnx"
+sensevoice_onnx_model = "models/sensevoice-small-onnx/model.int8.onnx"
+sensevoice_onnx_tokens = "models/sensevoice-small-onnx/tokens.txt"
+num_threads = 4
+
+[llm]
+base_url = "http://127.0.0.1:11434"
+model = "qwen2.5:3b"
+timeout_seconds = 180
+max_history_turns = 6
+max_reply_tokens = 256
+system_prompt = "你是一个中文语音对话原型。用自然、简洁的口语回答，通常控制在三句话以内。不要使用 Markdown 表格、代码块或表情，方便语音朗读。"
+
+[tts]
+backend = "gpt_sovits"
+provider = "cpu"
+num_threads = 4
+speaker_id = 3
+speed = 1.0
+
+[tts.vits]
+model = "models/vits-icefall-zh-aishell3/model.onnx"
+tokens = "models/vits-icefall-zh-aishell3/tokens.txt"
+lexicon = "models/vits-icefall-zh-aishell3/lexicon.txt"
+data_dir = ""
+dict_dir = ""
+rule_fsts = "models/vits-icefall-zh-aishell3/phone.fst,models/vits-icefall-zh-aishell3/date.fst,models/vits-icefall-zh-aishell3/number.fst"
+
+[tts.kokoro]
+model = "models/kokoro-multi-lang-v1_1/model.onnx"
+voices = "models/kokoro-multi-lang-v1_1/voices.bin"
+tokens = "models/kokoro-multi-lang-v1_1/tokens.txt"
+lexicon = "models/kokoro-multi-lang-v1_1/lexicon-us-en.txt,models/kokoro-multi-lang-v1_1/lexicon-zh.txt"
+data_dir = "models/kokoro-multi-lang-v1_1/espeak-ng-data"
+dict_dir = ""
+lang = ""
+rule_fsts = "models/kokoro-multi-lang-v1_1/phone-zh.fst,models/kokoro-multi-lang-v1_1/date-zh.fst,models/kokoro-multi-lang-v1_1/number-zh.fst"
+
+[tts.gpt_sovits]
+base_url = "http://127.0.0.1:9880"
+reference_audio = "data/tts_reference/reference.wav"
+reference_text = "请在这里填写参考音频中准确说出的文字。"
+reference_language = "zh"
+text_lang = "zh"
+sample_steps = 32
+timeout_seconds = 180
+
+[tts.rvc]
+enabled = false
+base_url = "http://127.0.0.1:9881"
+voice_name = "RVC voice"
+pitch = 2
+index_rate = 0.5
+protect = 0.33
+timeout_seconds = 180

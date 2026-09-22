@@ -1,0 +1,4 @@
+﻿path,source,label,seconds,label_source
+noise/keyboard.wav,wav_docs/noise/keyboard.wav,keyboard,12.31,filename
+noise/noise1.wav,wav_docs/noise/noise1.wav,room_background,14.04,speaker_confirmation
+noise/noise2.wav,wav_docs/noise/noise2.wav,room_window_open,11.81,speaker_confirmation

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-16",
+  "source": "user_message",
+  "statement": "exactly what I said. noise1 is my environment noise when I don't record, noise2 is noise in my room when my window is opened",
+  "transcript_status": "speaker_confirmed",
+  "applies_to_sources": [
+    "wav_docs/CN/十月一号的时候提醒我国庆节要放假了.wav",
+    "wav_docs/CN/小狗小狗现在要去做什么呀.wav",
+    "wav_docs/CN/我们使用Python，通过API连接本地模型.wav",
+    "wav_docs/CN/请解释一下语音识别和语音合成的区别.wav",
+    "wav_docs/EN/CanYouHelpMeGoToTheBedroomAndCheckIfAnyoneIsInThere.wav",
+    "wav_docs/MixedLanguages/CN+EN_我们使用Python通过API连接本地模型.wav",
+    "wav_docs/MixedLanguages/CN+JP_最近在网上看到了一款日本的汽水，その名前はハタラムネ、买了一点尝尝，とてもおいしいかった.wav",
+    "wav_docs/MixedLanguages/EN+JP明日のStudyPlanのarrangementを手伝ってください.wav"
+  ],
+  "noise_labels": {
+    "keyboard": "keyboard",
+    "noise1": "room_background",
+    "noise2": "room_window_open"
+  },
+  "asr_result_sha256": {
+    "outputs/pilot/whisper_clean.csv": "ac28a14e329dd326ec532b85763989efc9ee0f4fe3ed5b9c46784e409434c75d",
+    "outputs/pilot/whisper_noise.csv": "cea4757b46d599e2a4bf1b10d2bcd3e49e84bd2962ed0237ae05f76f6e284dfd",
+    "outputs/pilot/sensevoice_clean.csv": "96799939923d718497562e4c232e82d272e940e6a7078f6700c78e282d71aeff",
+    "outputs/pilot/sensevoice_noise.csv": "ec30f8dc36683194dbe26710ec41fb6c94cbe417df63c7b3bf0dfeeef4ed2427"
+  },
+  "notes": "Confirmation only; reference text, audio, and measured results are unchanged. Window position for noise1 was not specified."
+}

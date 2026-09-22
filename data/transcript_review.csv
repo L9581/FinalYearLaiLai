@@ -1,0 +1,9 @@
+﻿source,prepared_path,text,language,transcript_status,duplicate_of
+wav_docs/CN/十月一号的时候提醒我国庆节要放假了.wav,recordings/001.wav,十月一号的时候提醒我国庆节要放假了,zh,speaker_confirmed,
+wav_docs/CN/小狗小狗现在要去做什么呀.wav,recordings/002.wav,小狗小狗现在要去做什么呀,zh,speaker_confirmed,
+wav_docs/CN/我们使用Python，通过API连接本地模型.wav,recordings/003.wav,我们使用Python，通过API连接本地模型,zh+en,speaker_confirmed,
+wav_docs/CN/请解释一下语音识别和语音合成的区别.wav,recordings/004.wav,请解释一下语音识别和语音合成的区别,zh,speaker_confirmed,
+wav_docs/EN/CanYouHelpMeGoToTheBedroomAndCheckIfAnyoneIsInThere.wav,recordings/005.wav,Can you help me go to the bedroom and check if anyone is in there,en,speaker_confirmed,
+wav_docs/MixedLanguages/CN+EN_我们使用Python通过API连接本地模型.wav,,我们使用Python通过API连接本地模型,zh+en,speaker_confirmed,wav_docs/CN/我们使用Python，通过API连接本地模型.wav
+wav_docs/MixedLanguages/CN+JP_最近在网上看到了一款日本的汽水，その名前はハタラムネ、买了一点尝尝，とてもおいしいかった.wav,recordings/006.wav,最近在网上看到了一款日本的汽水，その名前はハタラムネ、买了一点尝尝，とてもおいしいかった,zh+ja,speaker_confirmed,
+wav_docs/MixedLanguages/EN+JP明日のStudyPlanのarrangementを手伝ってください.wav,recordings/007.wav,明日のStudy Planのarrangementを手伝ってください,en+ja,speaker_confirmed,

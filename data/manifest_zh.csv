@@ -1,0 +1,5 @@
+﻿path,text,condition,language,transcript_status
+recordings/001.wav,十月一号的时候提醒我国庆节要放假了,clean_zh,zh,speaker_confirmed
+recordings/002.wav,小狗小狗现在要去做什么呀,clean_zh,zh,speaker_confirmed
+recordings/003.wav,我们使用Python，通过API连接本地模型,clean_zh+en,zh+en,speaker_confirmed
+recordings/004.wav,请解释一下语音识别和语音合成的区别,clean_zh,zh,speaker_confirmed

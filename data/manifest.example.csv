@@ -1,0 +1,4 @@
+path,text,condition
+recordings/001.wav,你好请介绍一下你自己,clean
+recordings/002.wav,请解释一下什么是语音识别,clean
+recordings/003.wav,帮我制定一个两周的学习计划,clean
