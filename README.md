@@ -1,5 +1,11 @@
 # 本地语音交互实验室
 
+2026-10-10：已新增**自然语言结构化与模拟巡检 Agent**，支持 LLM 逐轮规划、四个模拟动作、Observation 反馈、人工暂停恢复、失败重试与完成条件核对。按 [当前阶段操作指南](docs/robot-agent-guide.md) 的七步运行，实测结果见 [验收记录](docs/robot-agent-verification.md)。入口：`.\.venv\Scripts\python.exe -m voice_lab.robot_agent run "依次检查 A、B，再回来"`。
+
+文字版控制页面：运行 `.\start_robot_agent.ps1`，然后打开 `http://127.0.0.1:8503`。页面默认使用离线规则 Agent 验证界面；切换到 Ollama 模式后可使用真实模型。
+
+2026-10-05：多 Agent 计划的**阶段一仿真执行基础**已实现，包含网格场景、五种工具、结构化状态、执行日志和回放验证。启动与验收见 [阶段一说明](docs/phase-one-simulation.md)，后续路线见 [多 Agent 计划](docs/multi-agent-simulation-plan.md)。本阶段使用人工任务和动作计划，无需启动模型服务。
+
 新声音已接入 **GPT-SoVITS v4 + 纳西妲 RVC**。从 GitHub 在新电脑安装请先看 [GPT-SoVITS v4 安装教程](docs/install-gpt-sovits.md)；已有本机配置的使用方法、试听与启动命令见 [新语音说明](docs/voice-upgrade.md)。新网页端口为 `8502`，配置为 `config.voice-upgrade.toml`。下文的 `config.local.toml` 保留用于原始 Whisper/SenseVoice、VITS/Kokoro 试验。
 
 仓库只保存代码、配置模板和文档，不包含大型模型、GPT-SoVITS 运行包、RVC 权重、个人录音或实验输出。这些文件被 `.gitignore` 排除，按下文说明在目标电脑上准备。当前升级配置模板见 `config.voice-upgrade.example.toml`；复制为 `config.voice-upgrade.toml` 后填写参考音频和实际模型路径。

@@ -1,0 +1,8 @@
+[
+  {"id":"new01","inputs":["麻烦到 A 区做一次检查，结束后回到起点。"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a"],"visit_in_order":false,"return_to_start":true}},
+  {"id":"new02","inputs":["这回先查B区，接着查A区，做完返回出发点。"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_b","point_a"],"visit_in_order":true,"return_to_start":true}},
+  {"id":"new03","inputs":["请移动至 point_b。"],"expected":{"status":"ready","task_type":"navigate","targets":["point_b"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"new04","inputs":["帮我巡检一下，结束要回来。","目标是A区。"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a"],"visit_in_order":false,"return_to_start":true}},
+  {"id":"new05","inputs":["去D区检查。"],"expected":{"status":"needs_clarification"}},
+  {"id":"new06","inputs":["先检查A点，再把杯子带回。"],"expected":{"status":"unsupported"}}
+]

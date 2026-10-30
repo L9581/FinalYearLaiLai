@@ -1,0 +1,10 @@
+{
+  "status": "ready",
+  "task": {
+    "task_type": "navigate",
+    "targets": ["point_a"],
+    "constraints": {"visit_in_order": false, "return_to_start": false},
+    "completion_rules": {"all_targets_reached": true, "at_start": false}
+  },
+  "clarification_question": null
+}

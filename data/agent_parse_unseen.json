@@ -1,0 +1,8 @@
+[
+  {"id":"unseen01","inputs":["劳驾去一下 B 点，不用检查。"],"expected":{"status":"ready","task_type":"navigate","targets":["point_b"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"unseen02","inputs":["请把 A 区和 B 区都检查一遍，不分先后，做完回来。"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a","point_b"],"visit_in_order":false,"return_to_start":true}},
+  {"id":"unseen03","inputs":["本次先检查基地，再检查 B 点，最后回到起点。"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["home","point_b"],"visit_in_order":true,"return_to_start":true}},
+  {"id":"unseen04","inputs":["我想去 Z 区看一看。"],"expected":{"status":"needs_clarification"}},
+  {"id":"unseen05","inputs":["检查后请返回原地。"],"expected":{"status":"needs_clarification"}},
+  {"id":"unseen06","inputs":["去 A 点看看，再拍一张照片。"],"expected":{"status":"unsupported"}}
+]

@@ -1,5 +1,30 @@
 # 验证记录
 
+## 2026-10-10：结构化指令与模拟巡检 Agent
+
+新增 `voice_lab/robot_agent/`：自然语言结构化、单 Agent 逐轮决策、模拟动作、暂停恢复与完成条件核对。全项目 **127 passed**；真实模型解析开发样例 20/20、扩展表述 6/6、最终新增表述 6/6；三类真实模型执行任务各重复三次，9/9 完成。详细证据、模型错误修正情况和验证范围见 [模拟 Agent 验收记录](robot-agent-verification.md)，运行步骤见 [操作指南](robot-agent-guide.md)。
+
+## 2026-10-05：阶段一符号仿真执行基础
+
+- 新增 `voice_lab/simulation/`：严格 JSON 输入、不可变世界状态、五种工具、BFS 网格导航、动作执行、目标检查、日志保存及重新执行校验。
+- 修改前运行原测试：**24 passed**。最终执行 `.\.venv\Scripts\python.exe -m pytest -q`：**75 passed in 2.29s**，其中新增仿真测试 51 项。
+- 通过真实 CLI 子进程执行六个内置场景，并分别从文件重新执行回放：
+
+| 场景 | 实际结果 | 执行动作数 | 日志回放 |
+| --- | --- | ---: | --- |
+| `move-cup` | completed；红杯到架子、手为空 | 6 | 通过 |
+| `open-box` | completed；开盒取苹果并放到桌上 | 5 | 通过 |
+| `closed-box` | failed / CONTAINER_CLOSED；后续两步跳过 | 2 | 通过 |
+| `missing-object` | failed / UNKNOWN_OBJECT | 2 | 通过 |
+| `blocked-path` | failed / UNREACHABLE；红杯仍在手中 | 4 | 通过 |
+| `unknown-tool` | failed / UNKNOWN_TOOL；状态不变 | 1 | 通过 |
+
+六个场景均符合预期；四个故意失败案例返回运行退出码 `1`，六次回放均返回 `0`。结果摘要在 `outputs/simulation/validation.json`，逐场景保存 `scenario.json`、`trace.json`、`replay.txt`。
+
+额外验证：全为成功动作但未满足最终目标时标记 `incomplete`；修改日志中的状态、路径、结果、事件数量或最终状态后，回放检测到不一致；Windows 管道输出可按 UTF-8 正确读取中文。
+
+范围：使用人工 `SemanticFrame` 和动作计划，未调用模型、PDDL 或真实语音推理；未实现多 Agent 协商、自动重规划、视觉感知或机器人动力学。原语音代码未改动，通过原有回归测试。启动与验收方法见 [阶段一说明](phase-one-simulation.md)。
+
 ## 2026-09-16：真实录音试验
 
 - 处理 `wav_docs/` 中的 8 个语音文件和 3 个噪声文件；排除一份重复录音后，保留 7 条独立语音，共 50.22 秒。

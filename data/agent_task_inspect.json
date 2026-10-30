@@ -1,0 +1,10 @@
+{
+  "status": "ready",
+  "task": {
+    "task_type": "inspect_locations",
+    "targets": ["point_a", "point_b"],
+    "constraints": {"visit_in_order": true, "return_to_start": true},
+    "completion_rules": {"all_targets_inspected": true, "at_start": true}
+  },
+  "clarification_question": null
+}

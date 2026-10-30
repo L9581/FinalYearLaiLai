@@ -1,0 +1,22 @@
+[
+  {"id":"dev01","inputs":["去 A 点"],"expected":{"status":"ready","task_type":"navigate","targets":["point_a"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev02","inputs":["请前往B区"],"expected":{"status":"ready","task_type":"navigate","targets":["point_b"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev03","inputs":["回基地"],"expected":{"status":"ready","task_type":"navigate","targets":["home"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev04","inputs":["检查 A 点"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev05","inputs":["去B区检查一下"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_b"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev06","inputs":["检查 A 点，完成后回来"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a"],"visit_in_order":false,"return_to_start":true}},
+  {"id":"dev07","inputs":["先检查 B 点，再检查 A 点"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_b","point_a"],"visit_in_order":true,"return_to_start":false}},
+  {"id":"dev08","inputs":["依次检查 A、B，再回来"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a","point_b"],"visit_in_order":true,"return_to_start":true}},
+  {"id":"dev09","inputs":["检查A点和B点，顺序不限"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a","point_b"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev10","inputs":["先去 A 点检查，再去 B 点检查，最后回到出发点"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a","point_b"],"visit_in_order":true,"return_to_start":true}},
+  {"id":"dev11","inputs":["去检查一下"],"expected":{"status":"needs_clarification"}},
+  {"id":"dev12","inputs":["去 C 点"],"expected":{"status":"needs_clarification"}},
+  {"id":"dev13","inputs":["去那里看看"],"expected":{"status":"needs_clarification"}},
+  {"id":"dev14","inputs":["去检查一下","A 点"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"dev15","inputs":["去检查一下，完成后回到出发点","B区"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_b"],"visit_in_order":false,"return_to_start":true}},
+  {"id":"dev16","inputs":["跳一段舞"],"expected":{"status":"unsupported"}},
+  {"id":"dev17","inputs":["把杯子拿过来"],"expected":{"status":"unsupported"}},
+  {"id":"dev18","inputs":["去 A 点拍照"],"expected":{"status":"unsupported"}},
+  {"id":"dev19","inputs":["去 A 点，然后回来"],"expected":{"status":"ready","task_type":"navigate","targets":["point_a"],"visit_in_order":true,"return_to_start":true}},
+  {"id":"dev20","inputs":["检查基地"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["home"],"visit_in_order":false,"return_to_start":false}}
+]

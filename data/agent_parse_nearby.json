@@ -1,0 +1,10 @@
+[
+  {"id":"nearby01","inputs":["在附近转一圈检查检查"],"expected":{"status":"needs_clarification"}},
+  {"id":"nearby02","inputs":["在附近转一圈检查检查","A 点和 B 点"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a","point_b"],"visit_in_order":false,"return_to_start":false}},
+  {"id":"nearby03","inputs":["在附近转一圈检查检查","先检查 A 点，再检查 B 点，最后回来"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_a","point_b"],"visit_in_order":true,"return_to_start":true}},
+  {"id":"nearby04","inputs":["在周围巡查一遍，完成后回来","B 点"],"expected":{"status":"ready","task_type":"inspect_locations","targets":["point_b"],"visit_in_order":false,"return_to_start":true}},
+  {"id":"nearby05","inputs":["在附近转一圈检查检查","就附近"],"expected":{"status":"needs_clarification"}},
+  {"id":"nearby06","inputs":["检查 A 点附近"],"expected":{"status":"needs_clarification"}},
+  {"id":"nearby07","inputs":["在附近转一圈检查检查，顺便拍照"],"expected":{"status":"unsupported"}},
+  {"id":"nearby08","inputs":["在附近转一圈检查检查","C 点"],"expected":{"status":"needs_clarification"}}
+]
